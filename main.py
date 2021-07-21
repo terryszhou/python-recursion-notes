@@ -57,7 +57,29 @@ def print_loop_easy(end_num):
 # print_loop_easy(50)
 
 # OVERRIDE RECURSION LIMIT - - - - - - - - - - - - - - - - -
-import sys
-sys.setrecursionlimit(1200)
+# import sys
+# sys.setrecursionlimit(1200)
 
 # EXAMPLE FOUR: FINDING FACTORIALS - - - - - - - - - - - - - - - - -
+def factorial(num, product = 1):
+    # base case
+    if num == 0: return product
+
+    # recursive logic
+    return factorial(num - 1, product * num)
+
+# print(factorial(5))
+
+# EXAMPLE FIVE: SUM OF NUMBERS - - - - - - - - - - - - - - - - -
+def sum_to(num):
+    # base case
+    if num < 0: return 0
+    
+    # recursive logic
+    return num + sum_to(num - 1)
+
+print(sum_to(10))
+
+    
+
+
