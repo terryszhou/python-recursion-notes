@@ -30,9 +30,6 @@ def compliment_machine(count = 0):
 # compliment_machine() # first invocation will be zero
 
 def print_loop(end_num, current_num = 0):
-    # for i in range(end_num):
-    #     print(i)
-
     # base case
     if current_num == end_num: return
 
@@ -42,4 +39,16 @@ def print_loop(end_num, current_num = 0):
     # advance state towards base case
     return print_loop(end_num, current_num + 1)
 
-print_loop(10)
+# print_loop(10)
+
+def print_loop_easy(end_num):
+    # base case
+    if end_num == 0: return
+
+    # actual function logic
+    print(end_num)
+
+    # advance state towards base case
+    return print_loop_easy(end_num - 1)
+
+print_loop_easy(50)
