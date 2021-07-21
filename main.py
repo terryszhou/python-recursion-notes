@@ -6,6 +6,7 @@ def recursive():
 # 2. needs to change state and move towards the base case (recursive case)
 # 3. invoke itself recursively
 
+# EXAMPLE ONE: COMPLIMENT MACHINE - - - - - - - - - - - - - - - - -
 def compliment_machine(count = 0):
     # rule 1
     if count == 4:
@@ -29,6 +30,7 @@ def compliment_machine(count = 0):
 
 # compliment_machine() # first invocation will be zero
 
+# EXAMPLE TWO: PRINT LOOP - - - - - - - - - - - - - - - - -
 def print_loop(end_num, current_num = 0):
     # base case
     if current_num == end_num: return
@@ -41,6 +43,7 @@ def print_loop(end_num, current_num = 0):
 
 # print_loop(10)
 
+# EXAMPLE THREE: PRINT LOOP V.2 - - - - - - - - - - - - - - - - -
 def print_loop_easy(end_num):
     # base case
     if end_num == 0: return
@@ -51,4 +54,10 @@ def print_loop_easy(end_num):
     # advance state towards base case
     return print_loop_easy(end_num - 1)
 
-print_loop_easy(50)
+# print_loop_easy(50)
+
+# OVERRIDE RECURSION LIMIT - - - - - - - - - - - - - - - - -
+import sys
+sys.setrecursionlimit(1200)
+
+# EXAMPLE FOUR: FINDING FACTORIALS - - - - - - - - - - - - - - - - -
